@@ -11,11 +11,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerStyle: { backgroundColor: '#4CAF50' }, // Default header color (green)
-          headerTintColor: 'black', // Default text color
+          headerStyle: { backgroundColor: '#4CAF50' },
+          headerTintColor: 'black',
           headerTitleStyle: { fontSize: 24, fontWeight: 'bold' },
           headerTitleAlign: 'left',
-          headerLeft: null, // Disable back arrow globally
+          headerLeft: null,
         }}
       >
         <Stack.Screen
@@ -27,10 +27,9 @@ export default function App() {
           name="PasswordGenerator"
           component={PasswordGenerator}
           options={{
-            title: 'Generator Hasła', // Custom title for this screen
-            headerStyle: { backgroundColor: '#8B4513' }, // Brown color for header
-            headerTintColor: 'white', // Set text color to white for better contrast with brown
-            headerLeft: null, // Disable back arrow on this screen as well
+            title: 'Generator Hasła',
+            headerStyle: { backgroundColor: '#8B4513' },
+            headerLeft: null,
           }}
         />
       </Stack.Navigator>

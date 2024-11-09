@@ -32,12 +32,12 @@ export default StyleSheet.create({
     backgroundColor: '#4CAF50',
     paddingHorizontal: 20,
     paddingVertical: 10,
-    borderRadius: 30, // Rounded corners similar to the "Generate" button
+    borderRadius: 30,
     alignItems: 'center',
   },
   navButtonText: {
     color: 'white',
-    fontSize: 20, // Match font size with the "Generate" button
+    fontSize: 20,
   },
   scrollContainer: {
     alignItems: 'center',
