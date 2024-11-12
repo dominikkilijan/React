@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Switch, TouchableOpacity, ScrollView } from 'react-native';
-import styles, { switchColors } from './styles';
+import styles, { switchColorsNum } from './styles';
 
 const RandomNumberGenerator = ({ navigation }) => {
   const [randomNumber, setRandomNumber] = useState(null);
@@ -41,7 +41,7 @@ const RandomNumberGenerator = ({ navigation }) => {
         <View style={styles.topRightButtonContainer}>
           <TouchableOpacity
             onPress={() => navigation.navigate('PasswordGenerator')}
-            style={styles.navButton}
+            style={styles.navButtonPass}
           >
             <Text style={styles.navButtonText}>Generuj hasło</Text>
           </TouchableOpacity>
@@ -57,8 +57,8 @@ const RandomNumberGenerator = ({ navigation }) => {
               setEvenOnly(value);
               if (value) setOddOnly(false);
             }}
-            trackColor={switchColors.trackColor}
-            thumbColor={evenOnly ? switchColors.thumbColorTrue : switchColors.thumbColorFalse}
+            trackColor={switchColorsNum.trackColor}
+            thumbColor={evenOnly ? switchColorsNum.thumbColorTrue : switchColorsNum.thumbColorFalse}
           />
         </View>
 
@@ -70,8 +70,8 @@ const RandomNumberGenerator = ({ navigation }) => {
               setOddOnly(value);
               if (value) setEvenOnly(false);
             }}
-            trackColor={switchColors.trackColor}
-            thumbColor={oddOnly ? switchColors.thumbColorTrue : switchColors.thumbColorFalse}
+            trackColor={switchColorsNum.trackColor}
+            thumbColor={oddOnly ? switchColorsNum.thumbColorTrue : switchColorsNum.thumbColorFalse}
           />
         </View>
 

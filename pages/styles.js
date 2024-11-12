@@ -1,9 +1,15 @@
 import { StyleSheet } from 'react-native';
 
-export const switchColors = {
-  trackColor: { false: '#767577', true: '#4CAF50' },
+export const switchColorsNum = {
+  trackColor: { false: 'lightgrey', true: '#9FFFA5' },
   thumbColorTrue: '#4CAF50',
-  thumbColorFalse: '#f4f3f4',
+  thumbColorFalse: 'grey',
+};
+
+export const switchColorsPass = {
+  trackColor: { false: 'lightgrey', true: '#BD9A9C' },
+  thumbColorTrue: '#795648',
+  thumbColorFalse: 'grey',
 };
 
 export default StyleSheet.create({
@@ -29,12 +35,20 @@ export default StyleSheet.create({
     marginRight: 16,
   },
   navButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#795648',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 30,
     alignItems: 'center',
   },
+  navButtonPass: {
+      backgroundColor: '#4CAF50',
+      paddingHorizontal: 20,
+      paddingVertical: 10,
+      borderRadius: 30,
+      alignItems: 'center',
+    },
+
   navButtonText: {
     color: 'white',
     fontSize: 20,
@@ -50,6 +64,13 @@ export default StyleSheet.create({
     textAlign: 'center',
     marginVertical: 10,
   },
+ passwordDisplay: {
+      fontSize: 48,
+      fontWeight: 'bold',
+      color: '#333',
+      textAlign: 'center',
+      marginVertical: 10,
+    },
   switchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -89,6 +110,14 @@ export default StyleSheet.create({
     color: '#333',
     width: '80%',
   },
+
+  warningText: {
+    color: 'red',
+    fontSize: 16,
+    marginVertical: 10,
+    textAlign: 'center',
+  },
+
   button: {
     backgroundColor: '#4CAF50',
     paddingVertical: 15,
@@ -101,4 +130,12 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: 22,
   },
+  buttonPass: {
+      backgroundColor: '#795648',
+      paddingVertical: 15,
+      paddingHorizontal: 40,
+      borderRadius: 30,
+      width: '80%',
+      alignItems: 'center',
+    },
 });

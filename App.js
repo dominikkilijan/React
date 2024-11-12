@@ -28,7 +28,7 @@ export default function App() {
           component={PasswordGenerator}
           options={{
             title: 'Generator Hasła',
-            headerStyle: { backgroundColor: '#8B4513' },
+            headerStyle: { backgroundColor: '#795648' },
             headerLeft: null,
           }}
         />
