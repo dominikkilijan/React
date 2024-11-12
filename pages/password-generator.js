@@ -43,7 +43,6 @@ const PasswordGenerator = ({ navigation }) => {
     }));
   };
 
-  // Check if all options are turned off
   const areAllOptionsOff = !options.uppercase && !options.lowercase && !options.numbers && !options.special;
 
   return (
@@ -117,7 +116,6 @@ const PasswordGenerator = ({ navigation }) => {
           />
         </View>
 
-        {/* Display a message if all options are off */}
         {areAllOptionsOff && (
           <Text style={styles.warningText}>Włącz przynajmniej jedną opcję, aby wygenerować hasło.</Text>
         )}
