@@ -37,6 +37,11 @@ const PasswordGenerator = ({ navigation }) => {
   };
 
   const toggleOption = (option) => {
+    // Check if disabling this option would result in all options being off
+    if (options[option] && Object.values(options).filter((value) => value).length === 1) {
+      return; // Prevent turning off the last remaining option
+    }
+
     setOptions((prevOptions) => ({
       ...prevOptions,
       [option]: !prevOptions[option],
@@ -78,6 +83,7 @@ const PasswordGenerator = ({ navigation }) => {
             {toggleOption('uppercase');
             setUpperCase(value);
             }}
+
             trackColor={switchColorsPass.trackColor}
             thumbColor={upperCaseOnly ? switchColorsPass.thumbColorTrue : switchColorsPass.thumbColorFalse}
           />
@@ -119,6 +125,7 @@ const PasswordGenerator = ({ navigation }) => {
         {areAllOptionsOff && (
           <Text style={styles.warningText}>Włącz przynajmniej jedną opcję, aby wygenerować hasło.</Text>
         )}
+
 
         <TouchableOpacity style={styles.buttonPass} onPress={generatePassword}>
           <Text style={styles.buttonText}>Generuj</Text>
