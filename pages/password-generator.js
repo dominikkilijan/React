@@ -37,9 +37,8 @@ const PasswordGenerator = ({ navigation }) => {
   };
 
   const toggleOption = (option) => {
-    // Check if disabling this option would result in all options being off
     if (options[option] && Object.values(options).filter((value) => value).length === 1) {
-      return; // Prevent turning off the last remaining option
+      return;
     }
 
     setOptions((prevOptions) => ({
