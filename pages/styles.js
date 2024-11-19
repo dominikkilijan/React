@@ -126,10 +126,12 @@ export default StyleSheet.create({
     width: '80%',
     alignItems: 'center',
   },
+
   buttonText: {
     color: 'white',
     fontSize: 22,
   },
+
   buttonPass: {
       backgroundColor: '#795648',
       paddingVertical: 15,
